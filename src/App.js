@@ -14,6 +14,7 @@ import  "./main.css"
 import './App.css'
 
 import tokenService from './utils/Tokens';
+import SignupScreen from './components/SignupScreen/SignupScreen';
 
 class App extends Component {
   constructor() {
@@ -67,7 +68,7 @@ class App extends Component {
       <Route path="/create" component={CreateExercise} />
       <Route path="/user" component={CreateUser} />
       <Route exact path='/signup' render={({ history }) => 
-            <SignupPage
+            <SignupScreen
               history={history}
               handleSignupOrLogin={this.handleSignupOrLogin}
             />

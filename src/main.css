@@ -1,0 +1,45 @@
+.nav {
+    justify-content: center;
+      display: flex;
+      justify-content: space-evenly;
+      color: black;
+      text-align: center;
+      height: 100px;
+      margin-top:20px;
+      padding-top: 30px;
+
+  }
+.html{
+    line-height: 5px;
+}
+
+  .a{
+      text-decoration: none;
+  }
+    .container{
+        margin-top: 50;;
+        height: 40px;
+        width: 400px;
+    }
+    .thead{
+        background-color: ivory;
+        color: black;
+        text-align: center;
+    }
+
+    .table{
+        background-color: ivory;
+    }
+
+    .html, body{
+        background-color: lavender;
+    }
+  .navLink{
+      color: rgba(0,0,252,1);
+      width: 250px;
+  }
+  .navLink:hover{
+      text-decoration: none;
+      background-color: rgba(252,252,240, .9);
+  }
+

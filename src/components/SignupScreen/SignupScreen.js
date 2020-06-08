@@ -1,8 +1,7 @@
-import React, { Component } from './node_modules/react';
-import { Link } from './node_modules/react-router-dom';
+import React, { Component } from 'react';
 import userService from '../../utils/user';
 
-class SignupForm extends Component {
+class SignupScreen extends Component {
 
   state = {
     name: '',
@@ -14,9 +13,10 @@ class SignupForm extends Component {
   handleChange = (e) => {
     this.props.updateMessage('');
     this.setState({
-      [e.target.nae]: e.target.value
+      [e.target.name]: e.target.value
     });
   }
+  
   handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -37,30 +37,30 @@ class SignupForm extends Component {
       <div>
         <header className="header-footer">Sign Up</header>
         <form className="form-horizontal" onSubmit={this.handleSubmit} >
-          <div className="form-group">
-            <div className="col-sm-12">
+          <div className="container">
+            <div>
               <input type="text" className="form-control" placeholder="Name" value={this.state.name} name="name" onChange={this.handleChange} />
             </div>
           </div>
-          <div className="form-group">
-            <div className="col-sm-12">
+          <div className="container">
+            <div>
               <input type="email" className="form-control" placeholder="Email" value={this.state.email} name="email" onChange={this.handleChange} />
             </div>
           </div>
-          <div className="form-group">
-            <div className="col-sm-12">
+          <div className="container">
+            <div>
               <input type="password" className="form-control" placeholder="Password" value={this.state.password} name="password" onChange={this.handleChange} />
             </div>
           </div>
-          <div className="form-group">
-            <div className="col-sm-12">
+          <div className="container">
+            <div>
               <input type="password" className="form-control" placeholder="Confirm Password" value={this.state.passwordConf} name="passwordConf" onChange={this.handleChange} />
             </div>
           </div>
-          <div className="form-group">
-            <div className="col-sm-12 text-center">
-              <button className="btn btn-default" disabled={this.isFormInvalid()}>Sign Up</button>&nbsp;&nbsp;
-              <Link to='/'>Cancel</Link>
+          <div className="container">
+            <div>
+              <button className="button" disabled={this.isFormInvalid()}>Sign Up</button>&nbsp;&nbsp;
+              <a href='/'>Cancel</a>
             </div>
           </div>
         </form>
@@ -69,4 +69,4 @@ class SignupForm extends Component {
   }
 }
 
-export default SignupForm;
+export default SignupScreen;

@@ -6,24 +6,22 @@ const NavBar = (props) => {
         <div class="navity">
             
             
-            <Link to="/create" className="nav-link">Create Exercise Log</Link>
+            <Link to="/create" className="navLink">Create Exercise Log</Link>
             
-            <Link to="/" className="nav-link">Exercises</Link>
+            <Link to="/" className="navLink">Exercises</Link>
             
-            <Link to=''className="nav-link" onClick={props.handleLogout}>Log out</Link>
-           
-            <span className='nav-link'>WELCOME, {props.user.name}</span>
+            <Link to=''className="navLink" onClick={props.handleLogout}>Log out</Link>
             
         </div>
         :
         <div className="nav">
-            <Link to="/create" className="nav-link">Create Exercise Log</Link>
-            &nbsp;&nbsp;|&nbsp;&nbsp;
-            <Link to="/" className="nav-link">Exercises</Link>
-            &nbsp;&nbsp;|&nbsp;&nbsp;
-            <Link to='/login' className="nav-link">Log in</Link>
-            &nbsp;&nbsp;|&nbsp;&nbsp;
-            <Link to='/signup' className="nav-link">Sign up</Link>
+            <Link to="/create" className="navLink">Create Exercise Log</Link>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <Link to="/" className="navLink">Exercises</Link>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <Link to='/login' className="navLink">Log in</Link>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <Link to='/signup' className="navLink">Sign up</Link>
             
         </div>
     return (
