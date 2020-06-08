@@ -56,12 +56,12 @@ export default class CreateExercise extends Component {
       date: this.state.date
     }
 
-    console.log(exercise);
-    const config = {
-      headers: {
-        'Authorization': 'Bearer ' + tokenService.getToken()
-      }
-  }
+    // console.log(exercise);
+    // const config = {
+    //   headers: {
+    //     'Authorization': 'Bearer ' + tokenService.getToken()
+    //   }
+  
     axios.post('http://localhost:3000/exercises/add', exercise)
       .then(res => console.log(res.data));
 

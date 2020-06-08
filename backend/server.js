@@ -1,8 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
-const path = require('path');
-const favicon = require('serve-favicon');
+const path = require('path')
 const logger = require('morgan');
 
 const app = express();
