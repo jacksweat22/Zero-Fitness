@@ -1,27 +1,21 @@
 const express = require('express');
-const cors =  require('cors');
+const cors = require('cors');
 const mongoose = require('mongoose');
+const path = require('path');
+const favicon = require('serve-favicon');
+const logger = require('morgan');
 
-require('dotevn').config();
 const app = express();
-const port = proccess.env.PORT || 3000;
 
-const exercisesRouter = require('./routes/exercises');
-const usersRouter =require('./routes/users');
+app.use(logger('dev'));
+app.use(express.json());
 
-app.use (cors());
-app.use (express.json());
-app.use('/exercises', exercisesRouter)
-app.use('/users',  usersRouter)
 
-const uri = process.env.ATLAS_URI;
-mongoose.connect(uri, {useNewUrlParser: true, useCreateIndex: true}
-    );
-const connection = mongoose.connection;
-connection.once('open',  ()=> {
-    console.log("mongoBD established")
-})
 
-app.listen(port, () =>  {
-    console.log(`server is running on port ${port}`)
-})
+require('dotenv').config();
+
+
+const port = process.env.PORT || 5000;
+
+app.use(cors());
+app.use(express.json());

@@ -49,6 +49,7 @@ router.route('/add').post((req,res) =>{
             .then(exercises => res.json(exercises))
             .catch(err =>  res.status(400).json('Error: ' + err));
     });
-
+    router.use(require("../config/auth"))
+    router.post("/", exerciseCtrl.create)
 
 module.exports = router;
