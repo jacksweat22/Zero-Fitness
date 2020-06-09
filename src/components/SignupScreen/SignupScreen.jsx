@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import userService from '../../utils/user';
 
 class SignupScreen extends Component {
@@ -10,8 +11,7 @@ class SignupScreen extends Component {
     passwordConf: ''
   };
 
-  handleChange = (e) => {
-    this.props.updateMessage('');
+  handleChange = async (e) => {
     this.setState({
       [e.target.name]: e.target.value
     });
@@ -24,7 +24,7 @@ class SignupScreen extends Component {
       this.props.handleSignupOrLogin();
       this.props.history.push('/');
     } catch (err) {
-      this.props.updateMessage(err.message);
+      alert('Invalid Credentials!');
     }
   } 
 
@@ -59,8 +59,8 @@ class SignupScreen extends Component {
           </div>
           <div className="container">
             <div>
-              <button className="button" disabled={this.isFormInvalid()}>Sign Up</button>&nbsp;&nbsp;
-              <a href='/'>Cancel</a>
+              <button className="btn btn-secondary" disabled={this.isFormInvalid()}>Sign Up</button>&nbsp;&nbsp;
+              <Link to='/'>Cancel</Link>
             </div>
           </div>
         </form>
