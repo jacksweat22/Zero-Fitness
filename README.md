@@ -3,13 +3,15 @@
 ## <h5> Introduction </h5>
 Zero Fitness is here to help you achieve maximum efficiency and help you reach that next 0 on your scale. The hardest part about working out is the consistency of ones exercises and reps. Zero Fitness is here to help make your life easier by proviing a platform that tracks your exercises so you alwayrs remeber your previous routines! 
 
-## <img src="">
+
+## <h2>Preview</h2>
+## <img src="https://i.imgur.com/klUp7bv.png">
 
 
 
 
 ## <h4> Technologies <h4>
-HTML5
+HTML5ß
 
 CSS
 
