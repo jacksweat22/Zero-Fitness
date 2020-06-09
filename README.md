@@ -29,6 +29,9 @@ Node.js
 ## <h4> Trello Board </h4>
     https://trello.com/b/XoWffNTa/zero-fitness
 
+## <h4>Heroku Link (not functional)</h4>
+https://git.heroku.com/nameless-shelf-26427.git
+
 ## <h3> How to Start </h3>
     To start, one MUST create an account to access the unique features Zer0 has to offer! Once logged in the user can create, update, an delete user generated exercises. 
 
