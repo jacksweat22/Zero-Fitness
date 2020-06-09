@@ -1,6 +1,7 @@
-import tokenService from './Tokens';
 
-const BASE_URL = 'http://localhost:5000/users/';
+import tokens from './Tokens';
+
+const BASE_URL = 'http://localhost:3000/users/';
 
 function signup(user) {
   return fetch(BASE_URL + 'signup', {
@@ -14,7 +15,7 @@ function signup(user) {
   })
   // Parameter destructuring!
   .then(({ token }) => {
-    tokenService.setToken(token);
+    token.setToken(token);
   });
 }
 
@@ -22,11 +23,11 @@ function signup(user) {
 
 
 function getUser() {
-  return tokenService.getUserFromToken();
+  return tokens.getUserFromToken();
 }
 
 function logout() {
-  tokenService.removeToken();
+  tokens.removeToken();
 }
 
 function login(creds) {
@@ -40,7 +41,7 @@ function login(creds) {
     if (res.ok) return res.json();
     throw new Error('Bad Credentials!');
   })
-  .then(({token}) => tokenService.setToken(token));
+  .then(({token}) => token.setToken(token));
 }
 
 export default {

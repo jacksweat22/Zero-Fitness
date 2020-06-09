@@ -8,13 +8,11 @@ import EditExercise from "./components/edit-exercise.component";
 import CreateExercise from "./components/create-exercise.component";
 import CreateUser from "./components/create-user.component";
 import userService from './utils/user';
-import SignupPage from './pages/SignUpPage/SignupPage';
+import SignupPage from './pages/SignUpPage/SignUpPage';
 import LoginPage from './pages/LoginPage/LoginPage';
-import  "./main.css"
-import './App.css'
-
-import tokenService from './utils/Tokens';
-import SignupScreen from './components/SignupScreen/SignupScreen';
+import  "./main.css";
+import './App.css';
+import Tokens from './utils/Tokens';
 
 class App extends Component {
   constructor() {
@@ -48,27 +46,20 @@ class App extends Component {
     <Router>
       <Navbar user = {this.state.user} handleLogout = {this.handleLogout} />
       <div className="container">
-      {/* <Navbar user = {this.state.user} handleLogout = {this.handleLogout} /> */}
-      <br/>
+            <br/>
       <section>
       <Route exact path="/" render={(props) => (
             <ExercisesList
-              //passing user from app to home so i can access it in NavBar!! important!!
               user={this.state.user}
               handleLogout={this.handleLogout}
               {...props} />
               )}/>
-                {/* <Route exact path="/exercise/:id" render={(props) => (
-            <ShowPage
-            getExerciseById = {this.getExerciseById}
-              {...props} />
-              )}/> */}
       </section>
       <Route path="/edit/:id" component={EditExercise} />
       <Route path="/create" component={CreateExercise} />
       <Route path="/user" component={CreateUser} />
       <Route exact path='/signup' render={({ history }) => 
-            <SignupScreen
+            <SignupPage
               history={history}
               handleSignupOrLogin={this.handleSignupOrLogin}
             />

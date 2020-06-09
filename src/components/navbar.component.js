@@ -3,9 +3,7 @@ import { Link } from 'react-router-dom';
 
 const NavBar = (props) => {
     const nav = props.user ?
-        <div class="navity">
-            
-            
+            <div>
             <Link to="/create" className="navLink">Create Exercise Log</Link>
             
             <Link to="/" className="navLink">Exercises</Link>
@@ -15,6 +13,11 @@ const NavBar = (props) => {
         </div>
         :
         <div className="nav">
+             <>
+            <h1>
+                <i>Zer0 Fitness</i>
+            </h1>
+            </>
             <Link to="/create" className="navLink">Create Exercise Log</Link>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <Link to="/" className="navLink">Exercises</Link>

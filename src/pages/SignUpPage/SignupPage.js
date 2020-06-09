@@ -12,10 +12,10 @@ class SignupForm extends Component {
     passwordConf: ''
   };
 
-  handleChange = (e) => {
-    this.props.updateMessage('');
+  handleChange = async (e) => {
+    this.prop.update('');
     this.setState({
-      // Using ES2015 Computed Property Names
+
       [e.target.name]: e.target.value
     });
   }
