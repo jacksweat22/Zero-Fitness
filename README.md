@@ -6,6 +6,8 @@ Zero Fitness is here to help you achieve maximum efficiency and help you reach t
 
 ## <h2>Preview</h2>
 ## <img src="https://i.imgur.com/klUp7bv.png">
+## <img src="https://i.imgur.com/GAbUwll.png">
+## <img src="https://i.imgur.com/dmeUbi4.png">
 
 
 
